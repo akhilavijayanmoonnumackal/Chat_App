@@ -28,7 +28,7 @@ const Navbar = () => {
     return (
         <>
 
-        <div className={`flex  top-0 justify-between items-center h-24 w-[100%] mx-auto px-4 text-white transition-colors${scrolled ? 'bg-gray-900':'bg-transparent'}`}>
+        <div className={`flex top-0 justify-between items-center h-24 w-[100%] mx-auto px-4 text-white transition-colors${scrolled ? 'bg-gray-900':'bg-transparent'}`}>
             <h1 className="w-1 text-3xl"><PiWechatLogoFill color="green"/></h1>     
             <h1 className="w-full text-3xl font-bold text-yellow-500 ml-6"><Link to='/'>talkto.me</Link></h1>
             <span className="text-yellow-600">Akhila</span>
@@ -39,23 +39,17 @@ const Navbar = () => {
             <div onClick={handleHeader} className="block md:hidden">
                 { header ? <AiOutlineCloseCircle size={20}/> : <BiMenu size={20}/>}
             </div>
-            <div className={header ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-gray-900 ease-in-out duration-500' : 'fixed left-[-100%]'}>
+            <div className={header ? 'fixed left-0 top-0 w-[50%] h-full border-r border-r-gray-900 bg-gray-900 ease-in-out duration-500' : 'fixed left-[-100%]'}>
                 <h1 className="pt-5 w-1 text-3xl h-0 ml-3"><PiWechatLogoFill color="green"/></h1>
                 <h1 className="w-full font-bold text-2xl ml-12 pt-0">talkto.me</h1>
-                <ul className="flex flex-col p-12">
+                <ul className="uppercase flex flex-col p-12">
                     <Link to='/login' className="p-1 border-b border-gray-700">Login</Link>
                     <Link to='/register' className="p-1 border-b border-gray-700">Register</Link>
                 </ul>
-            
-
             </div>
-            
         </div>
         </>
     )
-
-    
-    
 };
 
 export default Navbar;
